@@ -8,8 +8,9 @@ import { Toaster } from "@/components/ui/sonner";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Next.js Boilerplate",
-  description: "A Next.js boilerplate with Tailwind CSS and ShadCN components.",
+  title: "Write or Fade",
+  description:
+    "A writing app that fades your text if you stop typing. Set goals and write under pressure and have fun.",
 };
 
 export default function RootLayout({

@@ -1,7 +1,5 @@
-"use client";
-
 import { Header, HeaderStat } from "@/components/header";
-import { Button } from "@/components/ui/button";
+import { SessionStarter } from "@/components/session-starter";
 import {
   Card,
   CardContent,
@@ -9,30 +7,23 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import Link from "next/link";
-
-const pages = [{ key: "sample", label: "Sample", href: "/sample" }];
 
 export default function App() {
   return (
     <>
-      <Header left={[<HeaderStat label="App" value="Boilerplate" />]} />
+      <Header left={[<HeaderStat value="Write or Fade" />]} />
       <Card className="w-full max-w-md shadow-lg">
         <CardHeader className="text-center">
-          <CardTitle className="text-3xl font-bold">App boilerplate</CardTitle>
+          <CardTitle className="text-3xl font-bold">
+            New writing session
+          </CardTitle>
           <CardDescription>
-            Quick start next.js + tailwindcss + shadcn
+            Write continuously or watch your text disappear
           </CardDescription>
         </CardHeader>
 
         <CardContent className="flex flex-col gap-4 items-center justify-center">
-          {pages.map((page) => (
-            <Button key={page.key} size="lg" asChild>
-              <Link className="w-full max-w-xs text-lg py-6" href={page.href}>
-                {page.label}
-              </Link>
-            </Button>
-          ))}
+          <SessionStarter />
         </CardContent>
       </Card>
     </>

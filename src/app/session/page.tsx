@@ -26,8 +26,8 @@ export default function Sample() {
       />
       <Card className="w-full max-w-md shadow-lg">
         <CardHeader className="text-center">
-          <CardTitle className="text-3xl font-bold">Sample page</CardTitle>
-          <CardDescription>Sample page content goes here.</CardDescription>
+          <CardTitle className="text-3xl font-bold">Session page</CardTitle>
+          <CardDescription>Session page content goes here.</CardDescription>
         </CardHeader>
 
         <CardContent className="flex flex-col gap-4 items-center justify-center"></CardContent>

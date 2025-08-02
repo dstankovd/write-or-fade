@@ -8,10 +8,16 @@ export interface HeaderProps {
   right?: React.ReactNode[];
 }
 
-export function HeaderStat({ label, value }: { label: string; value: string }) {
+export function HeaderStat({
+  label,
+  value,
+}: {
+  label?: string;
+  value: string;
+}) {
   return (
     <div className="flex items-center gap-1 text-foreground text-sm">
-      <span className="text-muted-foreground">{label}:</span>
+      {label && <span className="text-muted-foreground">{label}</span>}
       <span className="font-bold text-foreground">{value}</span>
     </div>
   );
