@@ -11,7 +11,9 @@ import {
 export default function App() {
   return (
     <>
-      <Header left={[<HeaderStat value="Write or Fade" />]} />
+      <Header
+        left={[<HeaderStat key="write-or-fade" value="Write or Fade" />]}
+      />
       <Card className="w-full max-w-md shadow-lg">
         <CardHeader className="text-center">
           <CardTitle className="text-3xl font-bold">
