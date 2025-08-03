@@ -10,6 +10,11 @@ import {
   SelectContent,
   SelectItem,
 } from "@/components/ui/select";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { Clock } from "lucide-react";
 import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
@@ -22,11 +27,6 @@ export function SessionStarter() {
     countdownDuration: 10,
     isHardcoreMode: false,
   });
-
-  const startSession = () => {
-    // Logic to start the writing session with the current config
-    console.log("Starting session with config:", config);
-  };
 
   return (
     <div className="space-y-6 w-full max-w-sx flex items-start flex-col">
@@ -51,7 +51,7 @@ export function SessionStarter() {
         </TabsList>
         <TabsContent value="time">
           <div className="space-y-3 pt-3">
-            <Label className="font-medium">"Minutes to write"</Label>
+            <Label className="font-medium">Minutes to write</Label>
             <Input
               type="number"
               placeholder="15"
@@ -132,7 +132,15 @@ export function SessionStarter() {
             htmlFor="hardcore"
             className="text-stone-700 dark:text-stone-300 font-medium"
           >
-            💀 Hardcore Mode
+            <Tooltip>
+              <TooltipTrigger> 💀 Hardcore Mode</TooltipTrigger>
+              <TooltipContent>
+                <p>
+                  ⚠️ In hardcore mode, your text will be permanently deleted if
+                  it fades completely.
+                </p>
+              </TooltipContent>
+            </Tooltip>
           </Label>
         </div>
       </div>
@@ -153,7 +161,6 @@ export function SessionStarter() {
         }}
       >
         <Button
-          onClick={startSession}
           disabled={!config.goalType || !config.goalValue}
           className="w-full"
         >

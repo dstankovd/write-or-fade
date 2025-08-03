@@ -27,7 +27,7 @@ export function Header({ left, right }: HeaderProps) {
   return (
     <header className="absolute top-6 left-6 right-6 flex items-center z-10 justify-between">
       {left && left.length > 0 ? (
-        <div className="rounded-2xl px-6 py-3 border flex items-center gap-6">
+        <div className="rounded-2xl px-4 py-3 border flex items-center gap-4">
           {left?.map((item, index) => (
             <React.Fragment key={index}>{item}</React.Fragment>
           ))}

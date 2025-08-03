@@ -27,7 +27,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <main className="flex min-h-screen flex-col items-center justify-center p-4 bg-background text-foreground">
+          <main className="flex min-h-screen flex-col items-center justify-center bg-background text-foreground">
             {children}
             <Toaster />
           </main>
